@@ -1,7 +1,7 @@
 
 $(function(){
     var $width=$('#width'),
-              $height=$('#height'),
+        $height=$('#height'),
                     $btnCal=$('#calculate'),
                           $perimeter=$('#perimeter'),
                                 $area=$('#area');

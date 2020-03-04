@@ -1,15 +1,19 @@
 module.exports = function(grunt){
   grunt.initConfig({
-    eslint:{
+    htmlmin:{
       options:{
-        eslintrc:'./.eslintrc.json'
+        removeComments: true,
+        collapseWhitespace: true
       },
-       target:['*.js']
+  files:{
+    src:'./index.html',
+    dest:'dist/index.html'
+  }
   }
   });
 
-  grunt.loadNpmTasks('grunt-eslint');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   
 
-  grunt.registerTask('default',['eslint']);
+  grunt.registerTask('default',['htmlmin']);
 };
